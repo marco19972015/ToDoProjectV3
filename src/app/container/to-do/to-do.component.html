@@ -1,16 +1,30 @@
 <main>
     <h1>Enter your agenda bellow!</h1>
     
+    <!-- Section for User input section -->
     <section>
-        <!-- 1. Have a text box so user can write something -->
+        <!-- text box and click event to pass data to the component-->
         <input type="text" placeholder="Enter First Task" [(ngModel)]="userInput">
-        <!-- 2. have a button -->
-        <button (click)="showTask()">Submit</button>
+        <button (click)="addTaskToArray()">Submit</button>
     </section>
 
+    <!-- Section to show the user what they are typing -->
+    <section class="showUserInput">
+        <ng-container>{{userInput}}</ng-container>
+    </section>
+    <br>
 
+    <!-- Section to display what is in the userInputArray with div -->
     <section>
-
+        <ng-container *ngFor="let item of userInputArray">
+            {{item}} 
+            <button>P1</button>
+            <button>P2</button>
+            <button>P3</button>
+             <br>
+        </ng-container>
 
     </section>
+
+
 </main>

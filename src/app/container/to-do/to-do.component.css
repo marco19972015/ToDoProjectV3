@@ -1,0 +1,8 @@
+.showUserInput {
+    border: solid black;
+    width: 100%;
+    height: 70px;
+    margin-top: 15px;
+    overflow-wrap: break-word;
+    inline-size: 520px;
+}

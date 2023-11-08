@@ -7,10 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ToDoComponent {
 
-  userInput: string = ''
+  // create an array to the initial input push method
+  userInputArray: string[] = [];
 
-  showTask(){
-    console.log(this.userInput);
+  // Store the initial value of the user input
+  userInput: string = '';
+
+  // have this method be the one that adds the input to the array 
+  addTaskToArray(){
+    this.userInputArray.push(this.userInput);
   }
 
 }
