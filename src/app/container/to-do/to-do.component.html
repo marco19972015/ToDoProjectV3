@@ -1,3 +1,4 @@
+<!-- PARENT -->
 <main>
     <h1>Enter your agenda bellow!</h1>
     
@@ -13,18 +14,10 @@
         <ng-container>{{userInput}}</ng-container>
     </section>
     <br>
-
+    
     <!-- Section to display what is in the userInputArray with div -->
     <section>
-        <ng-container *ngFor="let item of userInputArray">
-            {{item}} 
-            <button>P1</button>
-            <button>P2</button>
-            <button>P3</button>
-             <br>
-        </ng-container>
-
+        <app-to-do-list *ngFor="let input of userInputArray" [list]="input"></app-to-do-list>
     </section>
-
 
 </main>
