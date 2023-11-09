@@ -1,10 +1,10 @@
 export class Agenda{
 
-    constructor(order: number, userInput: string){
-        this.order = order;
+    constructor(priority: string, userInput: string){
+        this.priority = priority;
         this.userInput = userInput
     }
 
-    order: number;
+    priority: string = '';
     userInput: string;
 }

@@ -1,27 +1,29 @@
 <!-- PARENT -->
 <main>
     <h1>Enter your agenda bellow!</h1>
-    
-    <!-- Section for User input section -->
+
     <section>
-        <!-- text box and click event to pass data to the component-->
-        <input type="text" placeholder="Enter First Task" [(ngModel)]="userInput">
-        <button (click)="addTaskToArray()">Submit</button>
+        <input type="text" placeholder="Enter the goal for today!" [(ngModel)]="userInput">
+
+        <br>
+        <select name="subscriptionType" [(ngModel)]="priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <br>
+        <button (click)="createNewGoal()">Create</button>
     </section>
 
-    <!-- Section to show the user what they are typing -->
-    <section class="showUserInput">
-        <ng-container>{{userInput}}</ng-container>
-    </section>
-    <br>
-
-    <app-filter></app-filter>
-    <!-- Section to display what is in the userInputArray with div -->
     <section>
-        <app-to-do-list *ngFor="let input of userInputArray" [list]="input"></app-to-do-list>
+        <app-to-do-list></app-to-do-list>
     </section>
 
-   
+    <section>
+        <app-filter>
+            
+        </app-filter>
+    </section>
 
 
 </main>
