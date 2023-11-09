@@ -1,6 +1,6 @@
 <!-- PARENT -->
 <main>
-    <h1>Enter your agenda bellow!</h1>
+    <h1 appSetBackgroundColor>Enter your agenda bellow!</h1>
     <section>
         <input type="text" placeholder="Enter the goal for today!" [(ngModel)]="userInput">
         <br>
@@ -10,12 +10,12 @@
             <option value="Low">Low</option>
         </select>
         <br>
-        <button (click)="createNewGoal()">Create</button>
+        <button appPropHover (click)="createNewGoal()">Create</button>
     </section>
 
     <section>
         <app-to-do-list>
-            <div *ngFor="let item of agendaList" class="title">
+            <div *ngFor="let item of agendaList" class="title" appHighlight>
    
                 {{item.priority}}: {{item.userInput}}
     
@@ -37,18 +37,15 @@
          of app-to-do-list -->
 
          <!-- High needs to be uppercase -->
-    <section>
+    <section >
         <app-to-do-list>
-            <div *ngFor="let item of agendaList" class="title">
-                <div *ngIf="item.priority === selectedFilterRadioButton">
+            <div *ngFor="let item of agendaList" class="title" >
+                <div *ngIf="item.priority === selectedFilterRadioButton" >
                     {{item.priority}}: {{item.userInput}}
                 </div>
             </div>
         </app-to-do-list>
 
     </section>
-
-    
-
 
 </main>

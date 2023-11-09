@@ -8,3 +8,12 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+.highlight{
+    box-shadow: 0 0 1px 3px #000 inset;
+    border: #efefef 2px solid;
+    box-shadow: 10px 1-px 18 px #cccccc;
+    transform: scale(1.05);
+    width: 100%;
+}
