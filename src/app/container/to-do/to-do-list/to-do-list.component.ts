@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { AgendaService } from 'src/app/Services/agenda.service';
 
 @Component({
@@ -12,11 +12,8 @@ export class ToDoListComponent {
 
   constructor(private agendaService: AgendaService){}
 
-
-  // At this point it the list is updating
   // new issue exists here, since we call the entire list it renders like that 
+  @Input()
   agendaList = this.agendaService.getEntireAgenda();
   
-  
-
 }

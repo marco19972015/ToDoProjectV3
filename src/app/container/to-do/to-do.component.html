@@ -13,13 +13,18 @@
         <button (click)="createNewGoal()">Create</button>
     </section>
 
-    <!-- Our  -->
     <section>
-        <app-to-do-list></app-to-do-list>
+        <app-to-do-list>
+            <div *ngFor="let item of agendaList" class="title">
+   
+                {{item.priority}}: {{item.userInput}}
+    
+            </div>
+            
+        </app-to-do-list>
     </section>
 
     <section>
-        <!-- have the parent pass down the props to the child component -->
         <app-filter 
         [high]="highCount" 
         [medium]="mediumCount" 
@@ -28,8 +33,17 @@
         </app-filter>
     </section>
 
+    <!-- Current what is happening is that we are rendering the entire view
+         of app-to-do-list -->
+
+         <!-- High needs to be uppercase -->
     <section>
-        <app-to-do-list *ngIf="selectedFilterRadioButton === 'high'">
+        <app-to-do-list>
+            <div *ngFor="let item of agendaList" class="title">
+                <div *ngIf="item.priority === selectedFilterRadioButton">
+                    {{item.priority}}: {{item.userInput}}
+                </div>
+            </div>
         </app-to-do-list>
 
     </section>

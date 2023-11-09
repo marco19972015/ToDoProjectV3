@@ -22,7 +22,7 @@ export class FilterComponent {
   selectedFilterRadioButtonChange: EventEmitter<string> = new EventEmitter<string>();
 
   // Assigns the selected radio button 
-  selectedFilterRadioButton : string = 'high'
+  selectedFilterRadioButton : string = 'High'
 
   // Method that will raise the custom event
   onSelectedFilterRadioButtonChange(){

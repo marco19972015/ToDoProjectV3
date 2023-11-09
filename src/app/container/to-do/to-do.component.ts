@@ -8,25 +8,19 @@ import { AgendaService } from 'src/app/Services/agenda.service';
   styleUrls: ['./to-do.component.css']
 })
 export class ToDoComponent implements DoCheck{
-
-  // Inject our service in the constructor
   constructor(private agendaService: AgendaService){}
 
-  // keep track of props this component
   priority: string = '';
   userInput: string = '';
   
   // Create a method to create a new goal
   createNewGoal(){
-    // Use the prop with the service to call the method to createa a new goal
     this.agendaService.createAgenda(this.priority, this.userInput);    
   }
-  
-  // keep track of props in this component
+
   highCount = 0;  
   mediumCount = 0
   lowCount = 0;
-  // Update after adding new goals to our list
   ngDoCheck(){
     this.highCount = this.agendaService.getHighGoals()
     this.mediumCount = this.agendaService.getMediumGoals()
@@ -35,8 +29,12 @@ export class ToDoComponent implements DoCheck{
 
 
   // prop to keep track of what button has been selected  
-  selectedFilterRadioButton: string = 'high'
+  selectedFilterRadioButton: string = 'High'
   onFilterChange(value: string){  // passing in the $event to get the data from our child component
-    this.selectedFilterRadioButton = value;    
+    this.selectedFilterRadioButton = value;     
+    console.log(this.selectedFilterRadioButton);
+       
   }
+
+  agendaList = this.agendaService.getEntireAgenda();
 }

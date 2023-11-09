@@ -1,7 +1,9 @@
-<!-- Here the list is updating so we do have the most up to date list -->
 <main>
-    <div *ngFor="let goal of agendaList">
-        {{goal.priority}} :
-        {{goal.userInput}}
+    <ng-content select=".title"></ng-content>
+
+    <div>
+        <!-- *ngFor="let goal of agendaList" -->
+        <!-- {{goal.priority}} :
+        {{goal.userInput}} -->
     </div>
 </main>
