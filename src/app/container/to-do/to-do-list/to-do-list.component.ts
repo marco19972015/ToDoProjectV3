@@ -14,11 +14,9 @@ export class ToDoListComponent {
 
 
   // At this point it the list is updating
+  // new issue exists here, since we call the entire list it renders like that 
   agendaList = this.agendaService.getEntireAgenda();
   
-  // ngDoCheck() {
-  //   // console.log(this.agendaList);
   
-  // }
 
 }

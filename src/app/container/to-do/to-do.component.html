@@ -20,10 +20,21 @@
 
     <section>
         <!-- have the parent pass down the props to the child component -->
-        <app-filter [high]="highCount" [medium]="mediumCount" [low]="lowCount">
-            
+        <app-filter 
+        [high]="highCount" 
+        [medium]="mediumCount" 
+        [low]="lowCount"
+        (selectedFilterRadioButtonChange)="onFilterChange($event)">
         </app-filter>
     </section>
+
+    <section>
+        <app-to-do-list *ngIf="selectedFilterRadioButton === 'high'">
+        </app-to-do-list>
+
+    </section>
+
+    
 
 
 </main>

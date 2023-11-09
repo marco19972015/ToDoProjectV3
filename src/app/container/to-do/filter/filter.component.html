@@ -1,12 +1,27 @@
 <div>
     <br><br>
     <span>Filter: </span>
-    <input type="radio" name="filter" id="High">
+    <input 
+    type="radio" 
+    name="filter" 
+    value="high" 
+    [(ngModel)]="selectedFilterRadioButton" 
+    (change)="onSelectedFilterRadioButtonChange()"> 
     <span>{{'High ('+high+')'}}</span>
 
-    <input type="radio" name="filter" id="Medium">
+    <input 
+    type="radio" 
+    name="filter" 
+    value="medium" 
+    [(ngModel)]="selectedFilterRadioButton" 
+    (change)="onSelectedFilterRadioButtonChange()">
     <span>{{'Medium ('+medium+')'}}</span>
 
-    <input type="radio" name="filter" id="Low">
+    <input 
+    type="radio" 
+    name="filter" 
+    value="low" 
+    [(ngModel)]="selectedFilterRadioButton" 
+    (change)="onSelectedFilterRadioButtonChange()">
     <span>{{'Low ('+low+')'}}</span>
 </div>
