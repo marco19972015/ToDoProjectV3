@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AgendaService } from 'src/app/Services/agenda.service';
+
 
 @Component({
   selector: 'to-do',
@@ -6,6 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./to-do.component.css']
 })
 export class ToDoComponent {
+
+  constructor(private agendaService: AgendaService){}
+
+
+
+
+  
 
   // create an array to the initial input push method
   userInputArray: string[] = [];

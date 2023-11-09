@@ -14,10 +14,14 @@
         <ng-container>{{userInput}}</ng-container>
     </section>
     <br>
-    
+
+    <app-filter></app-filter>
     <!-- Section to display what is in the userInputArray with div -->
     <section>
         <app-to-do-list *ngFor="let input of userInputArray" [list]="input"></app-to-do-list>
     </section>
+
+   
+
 
 </main>

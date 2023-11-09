@@ -1,8 +1,14 @@
 <!-- CHILD TEMPLATE -->
-<ng-container>
+<ng-container *ngIf="showTemplate">
     {{list}} 
-    <button>P1</button>
-    <button>P2</button>
-    <button>P3</button>
+    <br>
+    <p>Select Priority</p>
+    <select name="subscriptionType" [(ngModel)]="chosenPriority">
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
      <br>
+     <button (click)="addToList()">Confirm</button>
 </ng-container>
+<br>
