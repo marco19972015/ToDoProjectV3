@@ -1,10 +1,8 @@
 <!-- PARENT -->
 <main>
     <h1>Enter your agenda bellow!</h1>
-
     <section>
         <input type="text" placeholder="Enter the goal for today!" [(ngModel)]="userInput">
-
         <br>
         <select name="subscriptionType" [(ngModel)]="priority">
             <option value="High">High</option>
@@ -15,12 +13,14 @@
         <button (click)="createNewGoal()">Create</button>
     </section>
 
+    <!-- Our  -->
     <section>
         <app-to-do-list></app-to-do-list>
     </section>
 
     <section>
-        <app-filter>
+        <!-- have the parent pass down the props to the child component -->
+        <app-filter [high]="highCount" [medium]="mediumCount" [low]="lowCount">
             
         </app-filter>
     </section>

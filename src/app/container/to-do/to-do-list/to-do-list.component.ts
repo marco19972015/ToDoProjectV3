@@ -12,10 +12,13 @@ export class ToDoListComponent {
 
   constructor(private agendaService: AgendaService){}
 
+
+  // At this point it the list is updating
   agendaList = this.agendaService.getEntireAgenda();
-
-
-    
   
+  // ngDoCheck() {
+  //   // console.log(this.agendaList);
+  
+  // }
 
 }
